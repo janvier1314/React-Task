@@ -1,21 +1,10 @@
-import { FC, useState } from "react";
+import Weeks from "./Weeks";
 import "./Modal.css";
 
-import Weeks from "./Weeks";
-
-const Modal: FC = () => {
-  const [modal, setModal] = useState(false);
-
-  const modalHandler = () => {
-    setModal(!modal);
-  };
-
+const Modal: React.FC = (props) => {
   return (
     <div>
-      <button className="btn-modal" onClick={modalHandler}>
-        Share
-      </button>
-      {modal === true ? <Weeks /> : ""}
+      <Weeks />
     </div>
   );
 };
